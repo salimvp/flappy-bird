@@ -194,6 +194,13 @@ gameWrapper.addEventListener('pointerdown', (e) => {
   e.preventDefault();
   flap();
 });
+gameWrapper.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+  flap();
+}, { passive: false });
+gameWrapper.addEventListener('touchmove', (e) => {
+  e.preventDefault();
+}, { passive: false });
 
 // ── Pipe Spawning ────────────────────────────────────────────
 function spawnPipe() {

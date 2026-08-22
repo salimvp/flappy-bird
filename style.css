@@ -23,6 +23,7 @@ body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  touch-action: none;
 }
 
 #game-canvas {
