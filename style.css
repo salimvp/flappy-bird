@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#game-wrapper {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+#game-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#score-display {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0 4px 8px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 20;
+  color: #fff;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.overlay p {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+
+#final-score {
+  font-size: 28px !important;
+  font-weight: 700;
+  opacity: 1 !important;
+  color: #ffd700;
+}
+
+#best-score {
+  font-size: 20px !important;
+  font-weight: 600;
+  opacity: 1 !important;
+}
+
+.bird-preview {
+  width: 40px;
+  height: 30px;
+  background: #f5c842;
+  border-radius: 50% 50% 50% 20%;
+  margin-top: 20px;
+  animation: bob 1s ease-in-out infinite;
+  box-shadow: inset -4px -4px 0 #d4a017;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hidden {
+  display: none !important;
+}
