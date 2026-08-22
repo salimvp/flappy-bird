@@ -189,7 +189,8 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-canvas.addEventListener('pointerdown', (e) => {
+const gameWrapper = document.getElementById('game-wrapper');
+gameWrapper.addEventListener('pointerdown', (e) => {
   e.preventDefault();
   flap();
 });
